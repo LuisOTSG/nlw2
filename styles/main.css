@@ -2,21 +2,20 @@
 
 :root { /*variáveis com cores (extenso, hsl, rgb, hexadecimal) já definidas*/
     --color-background: #F0F0F7;
-    --color-primary-lighter: #9871F5;
-    --color-primary-light: #916BEA;
-    --color-primary: #f06e04;
-    --color-primary-dark: #774DD6;
-    --color-primary-darker: #6842c2;
-    --color-secondary: #04D361;
-    --color-secondary-dark: #04BF58;
+    --color-primary: #ff9900;
+    --color-primary-lighter: #ffa639;
+    --color-primary-darker: #ff8c00;
+    --color-secondary: #6842c2;
+    --color-secondary-lighter: #9c98ac;
+    --color-secondary-darker: #32264D;
     --color-title-in-primary: #FFFFFF;
-    --color-text-in-primary: #D4C2FF;
+    --color-text-in-primary: #FFFFFF;
     --color-text-title: #32264D;
     --color-text-complement: #9c98a6;
     --color-text-base: #9c98ac;
     --color-line-in-white: #E6E6F0;
     --color-input-background: #F8F8FC;
-    --color-button-text: #FFFFFF;
+    --color-button-text: #ffffff;
     --color-box-base: #FFFFFF;
     --color-box-footer: #FAFAFC;
     --color-small-info: #C1BCCC;
@@ -30,6 +29,9 @@
 body {
     background: var(--color-background);
     font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #cover {
@@ -38,32 +40,25 @@ body {
     padding-bottom: 15px;
     padding-left: 15px;
     padding-right: 15px;
-    width: 100x; /*width (px) é fixo*/
+    width: 100px; /*width (px) é fixo*/
     height: 200px; /*height (px) é fixo*/
 }
 
 html, body {
-    height: 100vh;
-}
-
-body {
-    background: var(--color-background);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 70vh;
 }
 
 body, input, textarea {
     /* font: 500 1.6rem Poppins; é possível agrupar as caracterísicas em uma linha*/
-    font-weight: 200;
+    font-weight: 500;
     font-family: Poppins;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: var(--color-text-base);
 }
 
 button {
-    font: 500 1.5rem Poppins;
-    color: var(--color-button-text);
+    font: 500 2.0rem Poppins;
+    color: var(--color-text-title);
 }
 
 #cover {
@@ -71,6 +66,12 @@ button {
     max-width: 700px;
     /* height: 200vh; */
     /* max-height: 100px; */
+}
+
+@media (min-width: 700px) {
+    :root {
+        font-size: 62.5%; /*todo 1rem passa a ser relativo a 10px */
+    }
 }
 
 
